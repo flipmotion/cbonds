@@ -1,0 +1,148 @@
+.my {
+	&-flex {
+		display: flex;
+	}
+}
+/*offcanvas*/
+.offcanvas {
+	transition:@transition;
+	position: fixed;
+	z-index: 10;
+	right: -320px;
+	width: 320px;
+	top:0;
+	bottom:0;
+	background: #fff;
+	.line {
+		margin: 10px -25px;
+	}
+	&-btn {
+		background: 0 0;
+		border: none;
+		box-shadow: none;
+		height: 100px;
+		width: 100px;
+		padding-left: 25px;
+		text-align: left;
+		border-radius: 0;
+		font-size: 18px;
+		&:hover,&:focus {
+			color: #fff;
+			background: 0 0;
+			box-shadow: none;
+		}
+		&:active{
+			color: #fff;
+			background: 0 0;
+			box-shadow: none;
+		}
+	}
+	&-underheader {
+		height: 0;
+	}
+	&-header {
+		height: 100px;
+		background: #303030;
+		color: #fff;
+		h3 {
+			margin: auto;
+			text-align: center;
+			text-indent: -100px;
+		}
+		.my-flex {
+			align-items: center;
+			&>div:nth-child(2) {
+				flex-grow: 1;
+			}
+		}
+	}
+	@offset-footer: 270px;/*this offset margin+padding for height footer*/
+	&-body {
+		background: #fff;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		padding-bottom: @offset-footer;
+		padding: 0px 0px @offset-footer + 25px;
+		.viewport-menu {
+			overflow: auto;
+			width: calc(~'100% + 20px');
+			height: 100%;
+		}
+		&-item {
+			display: flex;
+			padding: 25px 25px 25px;
+			margin-bottom: -25px;
+			img {
+				width: 80px;
+			}
+			&>div {
+				padding-right: 15px;
+				&:nth-child(2) {
+					display: flex;
+					justify-content: space-between;
+					    flex-direction: column;
+					flex-grow: 1;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+			.item-delete {
+				opacity: 0;
+				font-size: 12px;
+				color:#333;
+				padding: 0;
+				background: 0 0;
+				margin-top: -5px;
+				&:active {
+					box-shadow: none;
+				}
+			}
+			&:hover,&:focus {
+				background: #efefef;
+				.item-delete {
+					opacity: 1;
+				}
+			}
+			.item {
+				&-name {
+					font-size: 18px;
+					line-height: 1;
+					margin-bottom: 0px;
+				}
+				&-quantity  {
+					font-weight: 700;
+					margin-bottom: 0px;
+				}
+				&-price {
+					margin-bottom: 0px;
+					font-weight: 700;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	&-footer {
+		background: #fff;
+		height: @offset-footer;
+		margin-top:  -@offset-footer;
+		padding: 0 25px;
+		h3 {
+			margin: 0;
+		}
+		&-lvl {
+			&-1 {
+				padding: 20px 0 10px;
+			}
+		}
+		&-lvl {
+			&-2 {
+				padding: 15px 0 15px;
+			}
+		}
+		
+	}
+}
+/*offcanvas END*/
