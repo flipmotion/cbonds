@@ -3,6 +3,43 @@
 .op {
 	font-family: 'Open Sans', sans-serif;
 }
+@base-font-size: 14px;
+@base-color-text: #202122;
+p {
+	font-size: @base-font-size;
+	line-height: @base-font-size + 4px;
+}
+h1 {
+	font-size: @base-font-size + 8px;
+	color: @base-color-text;
+}
+h2 {
+	font-size: @base-font-size + 4px;
+	color: @base-color-text;
+}
+h3 {
+	font-size: @base-font-size + 2px;
+	color: @base-color-text;
+}
+h4 {
+	font-size: @base-font-size + 0px;
+	color: @base-color-text;
+}
+h5 {
+	font-size: @base-font-size -2px;
+	color: @base-color-text;
+}
+h6 {
+	font-size: @base-font-size -4px;
+	color: @base-color-text;
+}
 * {
 	.op;
+}
+a {
+	text-decoration: none;
+	color:#327ccb;
+	&:hover,&:focus {
+		text-decoration: underline;
+	}
 }
